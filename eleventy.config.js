@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
-  // Copy the stylesheet straight through to the built site.
+  // Copy the stylesheet and the images folder straight through to the built site.
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
+  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 
   // Take the first N items of a list (used for "recent writing" on the home page).
   eleventyConfig.addFilter("head", (arr, n) =>

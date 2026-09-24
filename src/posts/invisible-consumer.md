@@ -4,6 +4,7 @@ date: 2025-11-06
 dek: "E-commerce traffic from AI agents just rose 4,700% in a year. The buyer you now have to win over cannot see your ad, your logo, or your story. It only reads your data."
 categories: ["AI", "Marketing"]
 readtime: "7 min"
+thumb: "/images/covers/invisible-consumer.svg"
 ---
 
 Remember the movie Moneyball? You had the old-school baseball scouts, sitting in the stands, talking about a player's "good face" and the "sound the ball makes off his bat." They were trading on gut, vibe, and tradition. Then Jonah Hill's character walks in, looking like he's never held a baseball, and upends a century of tradition with one nerdy concept: sabermetrics. He didn't care about a beautiful swing. He cared about one cold, objective stat: on-base percentage.
@@ -33,6 +34,11 @@ But what actually is agentic commerce? Let's walk through a scenario.
 
 Your AI agent doesn't browse the web. It doesn't watch your five-million-dollar ad. It sends out a query. It pings the APIs of a hundred retailers and asks one cold, logical question: give me your product data that matches these parameters.
 
+<figure class="diagram">
+  <img src="/images/diagrams/agent-handoff.svg" alt="A person hands one instruction to an agent, which fires the same query at many retailers at once">
+  <figcaption>One instruction becomes a hundred parallel queries. The human never sees a single ad.</figcaption>
+</figure>
+
 Your inspirational marathon video? The agent can't see it. Your beautifully designed logo? It can't parse it. Your catchy slogan? Not a queryable data point. If your product's data is `{ "price": "$130", "shipping": "3-5_days", "sustainability": null }`, you are filtered out. It's not that you lost the sale. You were never even invited to the game. You didn't make the shortlist. Your brand has become invisible, not because it's uncool, but because it's un-queryable.
 
 > Agentic commerce is the fundamental shift from marketing-by-persuasion to marketing-by-permission.
@@ -40,6 +46,11 @@ Your inspirational marathon video? The agent can't see it. Your beautifully desi
 ## The three levels of the agent takeover
 
 This isn't a distant sci-fi future. According to analysts at places like McKinsey, it's happening now, in three distinct stages.
+
+<figure class="diagram">
+  <img src="/images/diagrams/three-levels.svg" alt="Three stages: an agent filtering a site, two agents negotiating, and a broker sitting between agents and sites">
+  <figcaption>From a polite filter, to a negotiation between machines, to a broker that becomes the new front door.</figcaption>
+</figure>
 
 ### 1. Agent-to-site
 

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-label="Placeholder: a scatter of data points with error bars and a fitted red trend line">
+  <style>
+    .dot{fill:#8b857b}
+    .whk{stroke:#8b857b;stroke-width:2;stroke-linecap:round}
+    .axis{stroke:#8b857b;stroke-width:1.5;opacity:.5}
+    .trend{stroke:#D93A32;stroke-width:3.5;fill:none;stroke-linecap:round}
+    .mark{fill:#8b857b;opacity:.07}
+    .lbl{fill:#8b857b;opacity:.55;font-family:ui-monospace,Menlo,monospace;font-size:15px;letter-spacing:2px}
+    @media (prefers-color-scheme: dark){
+      .dot,.whk{fill:#7e786f;stroke:#7e786f}
+      .axis{stroke:#7e786f}
+      .trend{stroke:#F26A60}
+      .mark{fill:#efeae2}
+      .lbl{fill:#8f897f}
+    }
+  </style>
+
+  <!-- faint plus-minus watermark -->
+  <g class="mark">
+    <rect x="360" y="120" width="30" height="150" rx="6"/>
+    <rect x="300" y="180" width="150" height="30" rx="6"/>
+    <rect x="300" y="300" width="150" height="30" rx="6"/>
+  </g>
+
+  <!-- axes -->
+  <line class="axis" x1="90" y1="560" x2="540" y2="560"/>
+  <line class="axis" x1="90" y1="560" x2="90" y2="300"/>
+
+  <!-- error whiskers -->
+  <g class="whk">
+    <line x1="120" y1="470" x2="120" y2="530"/><line x1="112" y1="470" x2="128" y2="470"/><line x1="112" y1="530" x2="128" y2="530"/>
+    <line x1="170" y1="454" x2="170" y2="502"/><line x1="162" y1="454" x2="178" y2="454"/><line x1="162" y1="502" x2="178" y2="502"/>
+    <line x1="222" y1="454" x2="222" y2="518"/><line x1="214" y1="454" x2="230" y2="454"/><line x1="214" y1="518" x2="230" y2="518"/>
+    <line x1="272" y1="424" x2="272" y2="476"/><line x1="264" y1="424" x2="280" y2="424"/><line x1="264" y1="476" x2="280" y2="476"/>
+    <line x1="322" y1="408" x2="322" y2="464"/><line x1="314" y1="408" x2="330" y2="408"/><line x1="314" y1="464" x2="330" y2="464"/>
+    <line x1="372" y1="386" x2="372" y2="430"/><line x1="364" y1="386" x2="380" y2="386"/><line x1="364" y1="430" x2="380" y2="430"/>
+    <line x1="422" y1="358" x2="422" y2="418"/><line x1="414" y1="358" x2="430" y2="358"/><line x1="414" y1="418" x2="430" y2="418"/>
+    <line x1="472" y1="336" x2="472" y2="384"/><line x1="464" y1="336" x2="480" y2="336"/><line x1="464" y1="384" x2="480" y2="384"/>
+    <line x1="516" y1="320" x2="516" y2="368"/><line x1="508" y1="320" x2="524" y2="320"/><line x1="508" y1="368" x2="524" y2="368"/>
+  </g>
+
+  <!-- data points -->
+  <g class="dot">
+    <circle cx="120" cy="500" r="5.5"/>
+    <circle cx="170" cy="478" r="5.5"/>
+    <circle cx="222" cy="486" r="5.5"/>
+    <circle cx="272" cy="450" r="5.5"/>
+    <circle cx="322" cy="436" r="5.5"/>
+    <circle cx="372" cy="408" r="5.5"/>
+    <circle cx="422" cy="388" r="5.5"/>
+    <circle cx="472" cy="360" r="5.5"/>
+    <circle cx="516" cy="344" r="5.5"/>
+  </g>
+
+  <!-- fitted trend -->
+  <path class="trend" d="M105 508 C 190 476, 250 456, 322 436 S 450 362, 525 340"/>
+
+  <text class="lbl" x="90" y="600">± MARGIN OF ERROR</text>
+</svg>

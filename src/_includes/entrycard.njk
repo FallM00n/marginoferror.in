@@ -1,0 +1,10 @@
+{% macro card(post) %}
+<a class="entry{% if post.data.thumb %} has-thumb{% endif %}" href="{{ post.url }}" data-cats="{{ post.data.categories | join('|') }}">
+  <div class="entry-body">
+    <span class="meta"><span class="cat">{{ post.data.categories | join(" · ") }}</span><span>{{ post.date | monthYear }}</span>{% if post.data.readtime %}<span>{{ post.data.readtime }}</span>{% endif %}</span>
+    <h3>{{ post.data.title }}</h3>
+    <span class="dek">{{ post.data.dek }}</span>
+  </div>
+  {% if post.data.thumb %}<span class="entry-thumb"><img src="{{ post.data.thumb }}" alt="" loading="lazy"></span>{% endif %}
+</a>
+{% endmacro %}

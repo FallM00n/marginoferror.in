@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Placeholder portrait">
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A1512"/>
+      <stop offset="1" stop-color="#1A1917"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="480" fill="url(#pg)"/>
+  <g fill="none" stroke="#D93A32" stroke-width="3" opacity="0.9">
+    <circle cx="200" cy="188" r="66"/>
+    <path d="M96 430 C 96 340, 150 300, 200 300 C 250 300, 304 340, 304 430" stroke-linecap="round"/>
+  </g>
+  <g fill="#efeae2" opacity="0.14">
+    <circle cx="200" cy="188" r="60"/>
+    <path d="M104 430 C 104 346, 154 308, 200 308 C 246 308, 296 346, 296 430 Z"/>
+  </g>
+  <text x="200" y="462" text-anchor="middle" fill="#8f897f" font-family="ui-monospace,Menlo,monospace" font-size="13" letter-spacing="3">PORTRAIT PLACEHOLDER</text>
+</svg>

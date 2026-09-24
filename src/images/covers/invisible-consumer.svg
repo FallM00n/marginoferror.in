@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Cover placeholder: an agent querying many retailers">
+  <rect width="480" height="300" fill="#17140F"/>
+  <rect width="480" height="300" fill="#D93A32" opacity="0.06"/>
+  <!-- radiating query lines from a central node to small boxes -->
+  <g stroke="#D93A32" stroke-width="2" opacity="0.85">
+    <line x1="150" y1="150" x2="300" y2="70"/>
+    <line x1="150" y1="150" x2="320" y2="110"/>
+    <line x1="150" y1="150" x2="330" y2="150"/>
+    <line x1="150" y1="150" x2="320" y2="190"/>
+    <line x1="150" y1="150" x2="300" y2="230"/>
+  </g>
+  <g fill="#EFEAE2">
+    <rect x="300" y="60" width="20" height="20" rx="4"/>
+    <rect x="322" y="100" width="20" height="20" rx="4"/>
+    <rect x="332" y="140" width="20" height="20" rx="4"/>
+    <rect x="322" y="180" width="20" height="20" rx="4"/>
+    <rect x="300" y="220" width="20" height="20" rx="4"/>
+  </g>
+  <circle cx="150" cy="150" r="30" fill="#D93A32"/>
+  <text x="150" y="159" text-anchor="middle" fill="#fff" font-family="Inter Tight,Arial,sans-serif" font-size="26" font-weight="700">&#177;</text>
+  <text x="40" y="270" fill="#8f897f" font-family="ui-monospace,Menlo,monospace" font-size="12" letter-spacing="3">AI &#183; MARKETING</text>
+</svg>

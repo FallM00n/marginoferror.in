@@ -65,7 +65,7 @@ main{max-width:70rem;margin:0 auto;padding:0 var(--gutter)}
 .kick{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:inline-flex;gap:.6em;align-items:center}
 .kick .d{color:var(--muted)}
 
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes rise{from{transform:translateY(12px)}to{transform:none}}
 .anim>*>*{animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
 .anim>*>*:nth-child(2){animation-delay:.05s}
 .anim>*>*:nth-child(3){animation-delay:.1s}
@@ -151,6 +151,46 @@ footer.site{border-top:1px solid var(--hair);margin-top:clamp(46px,9vw,104px)}
 .foot .links a{color:var(--muted);text-decoration:none;display:inline-flex;gap:.5em;align-items:baseline;transition:color .15s,gap .18s}
 .foot .links a:hover{color:var(--accent);gap:.8em}
 .foot .links a .ar{color:var(--accent);opacity:.6}
+
+/* home hero, two columns on wide screens with a masked, floating visual */
+.home-hero{display:grid;grid-template-columns:1fr;gap:30px;align-items:center}
+.hero-visual{display:none}
+.hero-visual img{width:100%;height:auto;display:block;
+  -webkit-mask-image:radial-gradient(125% 120% at 58% 46%,#000 52%,transparent 86%);
+  mask-image:radial-gradient(125% 120% at 58% 46%,#000 52%,transparent 86%);
+  animation:floaty 9s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@media (min-width:880px){
+  .home-hero{grid-template-columns:1.05fr .95fr;gap:48px}
+  .home-hero .lede{max-width:none}
+  .hero-visual{display:block}
+}
+
+/* entry cards can carry a cover thumbnail */
+.entry-body{display:grid;gap:5px}
+.entry.has-thumb{align-items:center}
+.entry-thumb{display:none}
+@media (min-width:620px){
+  .entry.has-thumb{grid-template-columns:1fr 150px;gap:26px}
+  .entry-thumb{display:block;width:150px;aspect-ratio:3/2;overflow:hidden;border-radius:10px;border:1px solid var(--hair)}
+  .entry-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+}
+
+/* diagrams inside essays */
+.diagram{margin:2.6rem 0;text-align:center}
+.diagram img{max-width:100%;width:min(100%,34rem);height:auto}
+.diagram figcaption{font-family:var(--mono);font-size:.72rem;letter-spacing:.02em;color:var(--muted);margin-top:.9rem;line-height:1.5}
+
+/* about portrait */
+.about-head{display:flex;flex-direction:column-reverse;gap:18px;align-items:flex-start}
+.about-intro{flex:1}
+.portrait{margin:0}
+.portrait img{width:150px;height:180px;object-fit:cover;border-radius:14px;border:1px solid var(--hair);
+  -webkit-mask-image:linear-gradient(#000 80%,transparent);mask-image:linear-gradient(#000 84%,transparent)}
+@media (min-width:640px){
+  .about-head{flex-direction:row;justify-content:space-between;gap:34px;align-items:center}
+  .portrait img{width:172px;height:204px}
+}
 
 @media (max-width:560px){
   body{font-size:1.02rem}
