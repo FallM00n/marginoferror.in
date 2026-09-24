@@ -1,0 +1,29 @@
+---
+layout: base.njk
+nav: projects
+title: Projects
+permalink: /projects/
+---
+<div class="page-wrap">
+  <header class="page-title">
+    <span class="eyebrow">Selected work</span>
+    <h1>Projects</h1>
+    <p class="page-lead">Concepts and practical studies. These are working frames, not claims of completed client work.</p>
+  </header>
+  <div class="project-list">
+    {% for p in projects %}
+    <article class="project-item">
+      <div class="project-number">{{ p.number }}</div>
+      <span class="project-thumb"><img src="{{ p.thumb }}" alt="Illustration for {{ p.title }}" loading="lazy"></span>
+      <div class="project-main">
+        <div class="project-kicker">{% for k in p.kicker %}<span>{{ k }}</span>{% endfor %}</div>
+        <h2>{{ p.title }}</h2>
+      </div>
+      <div class="project-details">
+        <p>{{ p.description }}</p>
+        <p class="muted">{{ p.note }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>

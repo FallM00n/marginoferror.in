@@ -1,0 +1,26 @@
+[
+  {
+    "number": "01",
+    "kicker": ["Concept study", "Operating design"],
+    "title": "Localisation operating model",
+    "thumb": "/images/projects/localisation.jpg",
+    "description": "A working model for carrying editorial intent across languages while keeping local judgement close to the audience.",
+    "note": "Explores clearer review paths, explicit quality signals, and fewer invisible hand-offs."
+  },
+  {
+    "number": "02",
+    "kicker": ["Prototype", "Product thinking"],
+    "title": "Editorial decision log",
+    "thumb": "/images/projects/decision-log.jpg",
+    "description": "A lightweight record for the small content decisions that are easy to make and surprisingly hard to explain later.",
+    "note": "Tests whether visible context can reduce repeated debates without creating another reporting ritual."
+  },
+  {
+    "number": "03",
+    "kicker": ["Ongoing study", "Research and synthesis"],
+    "title": "Market launch field notes",
+    "thumb": "/images/projects/field-notes.jpg",
+    "description": "A practical framework for observing how a central proposition changes when it meets local media habits and constraints.",
+    "note": "Organises questions for teams before execution hardens assumptions into process."
+  }
+]

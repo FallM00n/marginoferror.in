@@ -4,7 +4,7 @@ date: 2025-11-06
 dek: "E-commerce traffic from AI agents just rose 4,700% in a year. The buyer you now have to win over cannot see your ad, your logo, or your story. It only reads your data."
 categories: ["AI", "Marketing"]
 readtime: "7 min"
-thumb: "/images/covers/invisible-consumer.svg"
+cover: "/images/covers/invisible-consumer.jpg"
 ---
 
 Remember the movie Moneyball? You had the old-school baseball scouts, sitting in the stands, talking about a player's "good face" and the "sound the ball makes off his bat." They were trading on gut, vibe, and tradition. Then Jonah Hill's character walks in, looking like he's never held a baseball, and upends a century of tradition with one nerdy concept: sabermetrics. He didn't care about a beautiful swing. He cared about one cold, objective stat: on-base percentage.

@@ -4,26 +4,40 @@ nav: home
 permalink: /index.html
 ---
 {% from "entrycard.njk" import card %}
-<section class="view">
-  <div class="home-hero">
-    <div class="lede">
-      <span class="kick">Notes on getting it wrong, carefully</span>
-      <h1>I build things across borders, then write down what the data alone couldn&rsquo;t tell me.</h1>
-      <p class="intro">Hi, I&rsquo;m Sarath. I run international content operations at KukuFM, which right now means launching microdramas in languages they were never written in. <em>Margin of Error</em> is where I think out loud about the work: AI, marketing, media, and the small operational calls that quietly decide whether a thing works. I&rsquo;m wrong a fair amount. The writing is how I narrow the error bars.</p>
-      <p class="sig">Mostly case studies. Occasionally arguments. Always specific. &mdash; <b>SCY</b></p>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <img src="/images/hero.svg" alt="">
+<section class="home-intro">
+  <span class="eyebrow">Notes on getting it wrong, carefully</span>
+  <h1>I build things across borders, then write down what the data alone couldn&rsquo;t tell me.</h1>
+  <div class="intro-copy">
+    <figure class="intro-portrait">
+      <img src="/images/portrait.jpg" alt="Portrait of Sarath Chandra Yanamandra" width="900" height="1125">
+      <figcaption>Placeholder illustration &mdash; swap in a photo anytime.</figcaption>
+    </figure>
+    <div>
+      <p>Hi, I&rsquo;m Sarath. I run international content operations at KukuFM, and pay attention to how AI, marketing, media, and the operational calls underneath them behave once the presentation ends. I&rsquo;m wrong a fair amount. The writing is how I narrow the error bars.</p>
+      <a href="/about/" class="text-link">More about me <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
+</section>
 
-  <hr class="rule">
+<section class="section-block">
+  <div class="section-heading">
+    <span class="eyebrow">Recently published</span>
+    <a href="/writing/" class="text-link">All writing <span aria-hidden="true">&rarr;</span></a>
+  </div>
+  <div class="essay-list">
+    {% for post in collections.posts | reverse | head(4) %}{{ card(post) }}{% endfor %}
+  </div>
+</section>
 
-  <div class="col">
-    <div class="sec-label">Recent writing</div>
-    <div class="list">
-      {% for post in collections.posts | reverse | head(4) %}{{ card(post) }}{% endfor %}
-    </div>
-    <a class="more-link" href="/writing/">All writing <span aria-hidden="true">&rarr;</span></a>
+<section class="project-strip">
+  <div class="strip-head">
+    <span class="eyebrow">On the workbench</span>
+    <h2>Projects and practical studies.</h2>
+  </div>
+  <div class="project-preview">
+    {% for p in projects | head(2) %}
+    <a class="proj-teaser" href="/projects/"><span>{{ p.kicker[0] }}</span><h3>{{ p.title }}</h3></a>
+    {% endfor %}
+    <a href="/projects/" class="text-link">See projects <span aria-hidden="true">&rarr;</span></a>
   </div>
 </section>

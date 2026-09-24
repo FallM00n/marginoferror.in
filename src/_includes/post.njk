@@ -2,20 +2,24 @@
 layout: base.njk
 nav: writing
 ---
-<article>
-  <header class="art-head">
-    <span class="kick">{{ categories | join(" · ") }}</span>
+<article class="article-wrap">
+  <a class="back-link" href="/writing/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> All writing</a>
+  <header class="article-header">
+    <span class="eyebrow">{{ categories | join(" · ") }}</span>
     <h1>{{ title }}</h1>
-    {% if dek %}<p class="standfirst">{{ dek }}</p>{% endif %}
-    <div class="byline"><b>{{ site.author }}</b> <span class="sep">/</span> <span class="tnum">{{ date | monthYear }}</span>{% if readtime %} <span class="sep">/</span> {{ readtime }} read{% endif %}</div>
+    {% if dek %}<p class="article-standfirst">{{ dek }}</p>{% endif %}
+    <div class="article-meta"><span>By {{ site.author }}</span><time datetime="{{ date }}">{{ date | longDate }}</time>{% if readtime %}<span>{{ readtime }} read</span>{% endif %}</div>
   </header>
-
-  <div class="prose">
+  {% if cover %}<figure class="article-cover"><img src="{{ cover }}" alt=""></figure>{% endif %}
+  <div class="article-body prose">
     {{ content | safe }}
   </div>
-
-  <div class="art-foot">
-    <p class="abt"><b>{{ site.author }}</b> runs international content operations at KukuFM. He writes <em>Margin of Error</em> about AI, marketing, media, and the operational decisions that quietly decide outcomes.</p>
-    <a class="more-link" href="/writing/">More writing <span aria-hidden="true">&rarr;</span></a>
-  </div>
+  <footer class="article-footer">
+    <div class="author-note">
+      <span class="eyebrow">About the author</span>
+      <p>{{ site.author }} writes <em>Margin of Error</em> about AI, marketing, media, and the operational choices that quietly decide outcomes.</p>
+    </div>
+    {% set nxt = collections.posts | nextInList(page.url) %}
+    {% if nxt %}<a class="next-essay" href="{{ nxt.url }}"><span>Read next</span><strong>{{ nxt.data.title }}</strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>{% endif %}
+  </footer>
 </article>
