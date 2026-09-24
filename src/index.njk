@@ -1,0 +1,29 @@
+---
+layout: base.njk
+nav: home
+permalink: /index.html
+---
+<section class="view">
+  <div class="lede">
+    <span class="kick">Notes on getting it wrong, carefully</span>
+    <h1>I build things across borders, then write down what the data alone couldn&rsquo;t tell me.</h1>
+    <p class="intro">Hi, I&rsquo;m Sarath. I run international content operations at KukuFM, which right now means launching microdramas in languages they were never written in. <em>Margin of Error</em> is where I think out loud about the work: AI, marketing, media, and the small operational calls that quietly decide whether a thing works. I&rsquo;m wrong a fair amount. The writing is how I narrow the error bars.</p>
+    <p class="sig">Mostly case studies. Occasionally arguments. Always specific. &mdash; <b>SCY</b></p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="col">
+    <div class="sec-label">Recent writing</div>
+    <div class="list">
+      {% for post in collections.posts | reverse | head(4) %}
+      <a class="entry" href="{{ post.url }}">
+        <span class="meta"><span class="cat">{{ post.data.categories | join(" · ") }}</span><span>{{ post.date | monthYear }}</span>{% if post.data.readtime %}<span>{{ post.data.readtime }}</span>{% endif %}</span>
+        <h3>{{ post.data.title }}</h3>
+        <span class="dek">{{ post.data.dek }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <a class="more-link" href="/writing/">All writing <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>

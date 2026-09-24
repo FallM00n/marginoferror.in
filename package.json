@@ -1,0 +1,13 @@
+{
+  "name": "margin-of-error",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Margin of Error, the personal site of Sarath Chandra Yanamandra.",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

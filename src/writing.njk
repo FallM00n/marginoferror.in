@@ -1,0 +1,31 @@
+---
+layout: base.njk
+nav: writing
+title: Writing
+permalink: /writing/
+---
+<section class="view">
+  <div class="col">
+    <span class="kick">The archive</span>
+    <h1 class="page-title">Writing</h1>
+
+    <div class="filters" id="filters">
+      <button class="chip on" data-cat="All">All</button>
+      <button class="chip" data-cat="AI">AI</button>
+      <button class="chip" data-cat="Marketing">Marketing</button>
+      <button class="chip" data-cat="Media &amp; Culture">Media &amp; Culture</button>
+      <button class="chip" data-cat="Operating notes">Operating notes</button>
+    </div>
+
+    <div class="list" id="writing-list">
+      {% for post in collections.posts | reverse %}
+      <a class="entry" href="{{ post.url }}" data-cats="{{ post.data.categories | join('|') }}">
+        <span class="meta"><span class="cat">{{ post.data.categories | join(" · ") }}</span><span>{{ post.date | monthYear }}</span>{% if post.data.readtime %}<span>{{ post.data.readtime }}</span>{% endif %}</span>
+        <h3>{{ post.data.title }}</h3>
+        <span class="dek">{{ post.data.dek }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <p id="empty" class="empty" hidden>Nothing here yet in this category. More on the way.</p>
+  </div>
+</section>
