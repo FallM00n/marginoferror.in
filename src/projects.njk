@@ -8,22 +8,22 @@ permalink: /projects/
   <header class="page-title">
     <span class="eyebrow">Selected work</span>
     <h1>Projects</h1>
-    <p class="page-lead">Concepts and practical studies. These are working frames, not claims of completed client work.</p>
+    <p class="page-lead">Concepts and practical studies. These are working frames, not claims of completed client work. Each one opens into its own page.</p>
   </header>
   <div class="project-list">
-    {% for p in projects %}
-    <article class="project-item">
-      <div class="project-number">{{ p.number }}</div>
-      <span class="project-thumb"><img src="{{ p.thumb }}" alt="Illustration for {{ p.title }}" loading="lazy"></span>
+    {% for p in collections.projects %}
+    <a class="project-item" href="{{ p.url }}">
+      <div class="project-number">{{ p.data.number }}</div>
+      <span class="project-thumb"><img src="{{ p.data.cover }}" alt="Illustration for {{ p.data.title }}" loading="lazy"></span>
       <div class="project-main">
-        <div class="project-kicker">{% for k in p.kicker %}<span>{{ k }}</span>{% endfor %}</div>
-        <h2>{{ p.title }}</h2>
+        <div class="project-kicker">{% for k in p.data.kicker %}<span>{{ k }}</span>{% endfor %}</div>
+        <h2>{{ p.data.title }}</h2>
       </div>
       <div class="project-details">
-        <p>{{ p.description }}</p>
-        <p class="muted">{{ p.note }}</p>
+        <p>{{ p.data.dek }}</p>
+        <span class="project-open">Open project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
       </div>
-    </article>
+    </a>
     {% endfor %}
   </div>
 </div>

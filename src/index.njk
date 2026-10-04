@@ -10,10 +10,10 @@ permalink: /index.html
   <div class="intro-copy">
     <figure class="intro-portrait">
       <img src="/images/portrait.jpg" alt="Portrait of Sarath Chandra Yanamandra" width="900" height="1125">
-      <figcaption>Look Google made a cool photo of me.</figcaption>
+      <figcaption>Placeholder illustration &mdash; swap in a photo anytime.</figcaption>
     </figure>
     <div>
-      <p>Hi, I&rsquo;m Sarath. I do content at KukuFM, and pay attention to how AI, marketing, media, and the operational calls underneath them behave once the presentation ends. I&rsquo;m wrong a fair amount. The writing is how I narrow the error bars.</p>
+      <p>Hi, I&rsquo;m Sarath. I run international content operations at KukuFM, and pay attention to how AI, marketing, media, and the operational calls underneath them behave once the presentation ends. I&rsquo;m wrong a fair amount. The writing is how I narrow the error bars.</p>
       <a href="/about/" class="text-link">More about me <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
@@ -35,8 +35,8 @@ permalink: /index.html
     <h2>Projects and practical studies.</h2>
   </div>
   <div class="project-preview">
-    {% for p in projects | head(2) %}
-    <a class="proj-teaser" href="/projects/"><span>{{ p.kicker[0] }}</span><h3>{{ p.title }}</h3></a>
+    {% for p in collections.projects | head(2) %}
+    <a class="proj-teaser" href="{{ p.url }}"><span>{{ p.data.kicker[0] }}</span><h3>{{ p.data.title }}</h3></a>
     {% endfor %}
     <a href="/projects/" class="text-link">See projects <span aria-hidden="true">&rarr;</span></a>
   </div>

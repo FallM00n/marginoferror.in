@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
+  eleventyConfig.addPassthroughCopy({ "src/js": "js" });
 
   eleventyConfig.addFilter("head", (arr, n) =>
     Array.isArray(arr) ? arr.slice(0, n) : []
@@ -22,7 +23,6 @@ module.exports = function (eleventyConfig) {
     }
   });
 
-  // Next essay in the list (for the "Read next" link); null when there is none.
   eleventyConfig.addFilter("nextInList", (posts, url) => {
     const arr = posts || [];
     const i = arr.findIndex((p) => p.url === url);
