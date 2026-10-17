@@ -14,4 +14,4 @@ not_found_handling = "404-page"
 # Until then the site works normally and the reaction buttons stay hidden.
 # [[kv_namespaces]]
 # binding = "REACTIONS"
-# id = "PASTE_YOUR_KV_ID_HERE"
+# id = "19cf05d1be584a409d8a8051ce4f681c"
