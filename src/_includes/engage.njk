@@ -1,0 +1,34 @@
+{% set shareUrl = site.url + page.url %}
+<section class="engage" data-engage data-slug="{{ page.url }}" data-title="{{ title }}" aria-label="Respond and share">
+  <div class="react-wrap" data-reactions hidden>
+    <span class="eyebrow">What did you make of it?</span>
+    <div class="reacts" role="group" aria-label="Reactions">
+      <button class="react" type="button" data-type="useful" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span class="r-label">Useful</span><span class="r-count">0</span>
+      </button>
+      <button class="react" type="button" data-type="think" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"></path></svg>
+        <span class="r-label">Made me think</span><span class="r-count">0</span>
+      </button>
+      <button class="react" type="button" data-type="disagree" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v8M8 9h8M8 18h8"></path></svg>
+        <span class="r-label">I disagree</span><span class="r-count">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="share">
+    <span class="eyebrow">Pass it on</span>
+    <div class="share-row">
+      <button class="share-btn" type="button" data-share="native" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"></path><path d="m16 6-4-4-4 4"></path><path d="M12 2v13"></path></svg>Share
+      </button>
+      <a class="share-btn" href="https://x.com/intent/post?text={{ title | urlencode }}&amp;url={{ shareUrl | urlencode }}" target="_blank" rel="noopener">X</a>
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ shareUrl | urlencode }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="share-btn" href="https://wa.me/?text={{ (title + ' ' + shareUrl) | urlencode }}" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="share-btn" type="button" data-share="copy" data-url="{{ shareUrl }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg><span class="copy-label">Copy link</span>
+      </button>
+    </div>
+  </div>
+</section>

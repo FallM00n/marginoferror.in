@@ -29,6 +29,10 @@ module.exports = function (eleventyConfig) {
     return i > -1 && i < arr.length - 1 ? arr[i + 1] : null;
   });
 
+  eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  eleventyConfig.addFilter("iso", (d) => { try { return new Date(d).toISOString(); } catch (e) { return ""; } });
+  eleventyConfig.addFilter("rfc822", (d) => { try { return new Date(d).toUTCString(); } catch (e) { return ""; } });
+
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
     markdownTemplateEngine: "njk",

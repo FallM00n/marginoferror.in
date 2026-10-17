@@ -1,0 +1,26 @@
+---
+layout: base.njk
+nav: writing
+title: Writing
+permalink: /writing/
+---
+{% from "entrycard.njk" import card %}
+<div class="page-wrap">
+  <header class="page-title">
+    <span class="eyebrow">The archive</span>
+    <h1>Writing</h1>
+  </header>
+
+  <div class="filters" id="filters">
+    <button class="chip on" data-cat="All">All</button>
+    <button class="chip" data-cat="AI">AI</button>
+    <button class="chip" data-cat="Marketing">Marketing</button>
+    <button class="chip" data-cat="Media &amp; Culture">Media &amp; Culture</button>
+    <button class="chip" data-cat="Operating notes">Operating notes</button>
+  </div>
+
+  <div class="essay-list" id="writing-list">
+    {% for post in collections.posts | reverse %}{{ card(post) }}{% endfor %}
+  </div>
+  <p id="empty" class="empty" hidden>Nothing here yet in this category. More on the way.</p>
+</div>

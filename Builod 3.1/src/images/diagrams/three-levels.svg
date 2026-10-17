@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" role="img" aria-label="Three stages: agent filtering a site, two agents negotiating, and a broker between agents and sites">
+  <style>
+    .ln{stroke:#2A2724;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .box{stroke:#2A2724;stroke-width:2.4;fill:none}
+    .ac{stroke:#D93A32;stroke-width:2.4;fill:none;stroke-linecap:round}
+    .acf{fill:#D93A32}
+    .num{fill:#fff;font-family:"Inter Tight",Arial,sans-serif;font-size:16px;font-weight:700}
+    .txt{fill:#2A2724;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;letter-spacing:1px}
+    .lt{fill:#2A2724;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+    @media (prefers-color-scheme: dark){
+      .ln,.box{stroke:#E7E3DC}
+      .ac{stroke:#F26A60}
+      .acf{fill:#F26A60}
+      .txt,.lt{fill:#E7E3DC}
+    }
+  </style>
+  <marker id="ah2" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path class="acf" d="M0,0 L8,4 L0,8 z"/>
+  </marker>
+
+  <!-- dividers -->
+  <line class="ln" x1="213" y1="40" x2="213" y2="210" opacity="0.25"/>
+  <line class="ln" x1="426" y1="40" x2="426" y2="210" opacity="0.25"/>
+
+  <!-- Panel 1: agent to site -->
+  <circle class="acf" cx="45" cy="52" r="13"/>
+  <text class="num" x="45" y="57" text-anchor="middle">1</text>
+  <circle class="ac" cx="70" cy="120" r="22"/>
+  <text class="lt" x="70" y="125" text-anchor="middle">agt</text>
+  <line class="ac" x1="96" y1="120" x2="130" y2="120" marker-end="url(#ah2)"/>
+  <rect class="box" x="136" y="98" width="48" height="44" rx="6"/>
+  <text class="lt" x="160" y="125" text-anchor="middle">site</text>
+  <text class="txt" x="105" y="192" text-anchor="middle">Agent to site</text>
+
+  <!-- Panel 2: agent to agent -->
+  <circle class="acf" cx="258" cy="52" r="13"/>
+  <text class="num" x="258" y="57" text-anchor="middle">2</text>
+  <circle class="ac" cx="270" cy="120" r="22"/>
+  <text class="lt" x="270" y="125" text-anchor="middle">agt</text>
+  <circle class="ac" cx="372" cy="120" r="22"/>
+  <text class="lt" x="372" y="125" text-anchor="middle">agt</text>
+  <line class="ac" x1="298" y1="112" x2="344" y2="112" marker-end="url(#ah2)"/>
+  <line class="ac" x1="344" y1="130" x2="298" y2="130" marker-end="url(#ah2)"/>
+  <text class="txt" x="321" y="192" text-anchor="middle">Agent to agent</text>
+
+  <!-- Panel 3: brokered -->
+  <circle class="acf" cx="452" cy="52" r="13"/>
+  <text class="num" x="452" y="57" text-anchor="middle">3</text>
+  <circle class="ac" cx="470" cy="120" r="20"/>
+  <text class="lt" x="470" y="125" text-anchor="middle">agt</text>
+  <line class="ac" x1="492" y1="120" x2="518" y2="120" marker-end="url(#ah2)"/>
+  <rect class="ac" x="524" y="98" width="44" height="44" rx="8" transform="rotate(45 546 120)"/>
+  <text class="lt" x="546" y="124" text-anchor="middle">hub</text>
+  <g>
+    <line class="ac" x1="574" y1="112" x2="604" y2="84" marker-end="url(#ah2)"/>
+    <line class="ac" x1="576" y1="120" x2="606" y2="120" marker-end="url(#ah2)"/>
+    <line class="ac" x1="574" y1="128" x2="604" y2="156" marker-end="url(#ah2)"/>
+  </g>
+  <g class="box">
+    <rect x="608" y="72" width="22" height="20" rx="4"/>
+    <rect x="610" y="110" width="22" height="20" rx="4"/>
+    <rect x="608" y="148" width="22" height="20" rx="4"/>
+  </g>
+  <text class="txt" x="530" y="192" text-anchor="middle">Brokered</text>
+</svg>

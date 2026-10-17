@@ -102,3 +102,20 @@ Open its `.md` file in `src/posts`, click the pencil, edit, and commit.
 npm install
 npm start
 ```
+
+## Reactions (Useful / Made me think / I disagree)
+
+Every essay and project ends with reaction buttons and a share row. The share row works right away. The reaction buttons stay hidden until you give the site somewhere to store the counts:
+
+1. In Cloudflare, go to Storage & databases > KV > Create. Name it `moe-reactions`.
+2. Copy the ID it shows you.
+3. Open `wrangler.toml` in GitHub, remove the `# ` at the start of the last three lines, and paste the ID in place of `PASTE_YOUR_KV_ID_HERE`. Commit.
+
+The next build turns the buttons on. Counts are anonymous; each visitor's own taps are remembered in their browser so they can undo them.
+
+## Other things the site does on its own
+
+- `/feed.xml` is an RSS feed of every essay, updated on each build.
+- Any broken link shows the custom "fell outside the margin of error" page (`src/404.njk`).
+- Headlines settle in word by word, sections fade in as you scroll, and cards follow the pointer with a soft light. All of it switches off for visitors who ask their device for reduced motion.
+- Type: Bricolage Grotesque for headlines, Instrument Sans for reading text.

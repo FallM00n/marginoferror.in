@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" role="img" aria-label="A person hands one instruction to an agent, which queries many retailers at once">
+  <style>
+    .ln{stroke:#2A2724;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .sol{fill:#2A2724}
+    .ac{stroke:#D93A32;stroke-width:2.4;fill:none;stroke-linecap:round}
+    .acf{fill:#D93A32}
+    .box{stroke:#2A2724;stroke-width:2.4;fill:none}
+    .txt{fill:#2A2724;font-family:ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:1px}
+    .txm{fill:#8b857b;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:1px}
+    @media (prefers-color-scheme: dark){
+      .ln,.box{stroke:#E7E3DC}
+      .sol{fill:#E7E3DC}
+      .txt{fill:#E7E3DC}
+      .ac{stroke:#F26A60}
+      .acf{fill:#F26A60}
+      .txm{fill:#8f897f}
+    }
+  </style>
+  <marker id="ah" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path class="acf" d="M0,0 L8,4 L0,8 z"/>
+  </marker>
+
+  <!-- person -->
+  <g class="ln">
+    <circle cx="70" cy="66" r="16"/>
+    <line x1="70" y1="82" x2="70" y2="146"/>
+    <line x1="44" y1="106" x2="96" y2="106"/>
+    <line x1="70" y1="146" x2="52" y2="192"/>
+    <line x1="70" y1="146" x2="88" y2="192"/>
+  </g>
+  <text class="txm" x="70" y="216" text-anchor="middle">YOU</text>
+
+  <!-- instruction arrow -->
+  <line class="ac" x1="104" y1="112" x2="196" y2="112" marker-end="url(#ah)"/>
+  <text class="txm" x="150" y="98" text-anchor="middle">"buy shoes"</text>
+
+  <!-- agent node -->
+  <rect class="box" x="206" y="80" width="96" height="64" rx="12"/>
+  <circle class="sol" cx="254" cy="70" r="3"/>
+  <line class="ln" x1="254" y1="73" x2="254" y2="80"/>
+  <text class="txt" x="254" y="117" text-anchor="middle">AGENT</text>
+
+  <!-- fan-out queries -->
+  <g>
+    <line class="ac" x1="306" y1="112" x2="470" y2="49" marker-end="url(#ah)"/>
+    <line class="ac" x1="306" y1="112" x2="470" y2="89" marker-end="url(#ah)"/>
+    <line class="ac" x1="306" y1="112" x2="470" y2="129" marker-end="url(#ah)"/>
+    <line class="ac" x1="306" y1="112" x2="470" y2="169" marker-end="url(#ah)"/>
+    <line class="ac" x1="306" y1="112" x2="470" y2="209" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- retailer boxes -->
+  <g class="box">
+    <rect x="478" y="36" width="40" height="28" rx="5"/>
+    <rect x="478" y="76" width="40" height="28" rx="5"/>
+    <rect x="478" y="116" width="40" height="28" rx="5"/>
+    <rect x="478" y="156" width="40" height="28" rx="5"/>
+    <rect x="478" y="196" width="40" height="28" rx="5"/>
+  </g>
+  <text class="txm" x="536" y="128" >100 retailers,</text>
+  <text class="txm" x="536" y="146" >one query each</text>
+</svg>
